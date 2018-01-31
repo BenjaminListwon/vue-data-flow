@@ -6,10 +6,10 @@
     </header>
     <div class="row">
       <div class="col">
-        <client clientid="Client A" :messages="messages" :callback="newMessage"></client>
+        <client clientid="Client A" :messages="messages" @sendMessage="newMessage"></client>
       </div>
       <div class="col">
-        <client clientid="Client B" :messages="messages" :callback="newMessage"></client>
+        <client clientid="Client B" :messages="messages" @sendMessage="newMessage"></client>
       </div>
     </div>
   </div>
