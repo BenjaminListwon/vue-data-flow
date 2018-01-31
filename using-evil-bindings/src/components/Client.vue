@@ -15,16 +15,20 @@
 </template>
 
 <script>
+const events = {
+  sendMessage: 'sendMessage'
+}
+
 export default {
   data() {
     return {
       msg: ''
     }
   },
-  props: ['clientid', 'messages', 'callback'],
+  props: ['clientid', 'messages'],
   methods: {
     trySendMessage() { 
-      this.callback({
+      this.$emit(events.sendMessage, {
         text: this.msg, 
         sender: this.clientid
       })
